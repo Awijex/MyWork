@@ -100,8 +100,8 @@ class Building:
         return f"{self.name}_1.gif"
 
     def draw(self):
-        pic_name = self.get_pic_name ()
-        pic_path = os.path.join (BASE_PATH, "images", pic_name)
+        pic_name = self.get_pic_name()
+        pic_path = os.path.join(BASE_PATH, "images", pic_name)
         if self.pen.shape() != pic_path:
             window.register_shape(pic_path)
             self.pen.shape(pic_path)
@@ -144,7 +144,7 @@ def fire_enemy_missile():
 
 def move_missiles(missiles):
     for missile in missiles:
-        missile.step ()
+        missile.step()
 
     dead_missiles = [missile for missile in missiles if missile.state == 'dead']
     for dead in dead_missiles:
